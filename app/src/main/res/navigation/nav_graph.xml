@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav_graph">
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainMovieFragment">
 
+    <fragment
+        android:id="@+id/mainMovieFragment"
+        android:name="com.example.themoviedb.MainMovieFragment"
+        android:label="MainMovieFragment">
+        <action
+            android:id="@+id/navShowMovie"
+            app:destination="@+id/moviePageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/moviePageFragment"
+        android:name="com.example.themoviedb.MoviePageFragment"
+        android:label="MoviePageFragment">
+        <argument
+            android:name="moviePageUri"
+            app:argType="android.net.Uri" />
+    </fragment>
 </navigation>

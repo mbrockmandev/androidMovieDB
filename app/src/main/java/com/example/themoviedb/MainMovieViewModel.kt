@@ -26,7 +26,7 @@ class MainMovieViewModel : ViewModel() {
                     val items = fetchListItems(storedQuery)
                     _uiState.update { oldState ->
                         oldState.copy(
-                            images = items,
+                            movies = items,
                             query = storedQuery
                         )
                     }
@@ -47,13 +47,10 @@ class MainMovieViewModel : ViewModel() {
         } else {
             movieRepository.fetchMovies()
         }
-
     }
-
-
 }
 
-data class PhotoGalleryUIState(
-    val images: List<MovieItem> = listOf(),
+data class MovieListUIState(
+    val movies: List<MovieItem> = listOf(),
     val query: String = "",
 )

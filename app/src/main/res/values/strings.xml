@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">The Movie DB</string>
+    <string name="search">Search</string>
+    <string name="clear_search">Clear Search</string>
+    <string name="notification_channel_name">Background updates</string>
+    <string name="new_movies_title">New Movies</string>
+    <string name="new_movies_text">You have new movies available in The Movie DB.</string>
 </resources>
