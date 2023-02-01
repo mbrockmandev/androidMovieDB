@@ -14,11 +14,13 @@ data class MovieItem(
 ) { // TODO: this is an argument to be passed to get detail view of movie
     // TODO: substitute with URI from my other movie db app
     val moviePageUri: Uri
-        get() = Uri.parse("https://api.themoviedb.org/3/movie/") // double check the uri
+        get() = Uri.parse("https://api.themoviedb.org/3/movie") // double check the uri
             .buildUpon()
             .appendPath(id)
-            .appendPath(API_KEY.key) // maybe wrong?
             .build()
 }
 
+// get movie details
 // https://api.themoviedb.org/3/movie/(id)?api_key=APIKEY&language=en-US
+// return query results for query "onion"
+// https://api.themoviedb.org/3/search/movie?api_key=____&language=en-US&query=onion&page=1

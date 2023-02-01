@@ -15,9 +15,8 @@ class MovieInterceptor : Interceptor {
         // TODO: MODIFY THIS TO GET THE RIGHT RESULT!!!
         val newUrl: HttpUrl = originalRequest.url.newBuilder()
             .addQueryParameter("api_key", API_KEY.key)
-            .addQueryParameter("format", "json")
-            .addQueryParameter("nojsoncallback", "1")
-            .addQueryParameter("extras", "url_s")
+            .addQueryParameter("language", "en-US")
+            .addQueryParameter("page", "1")
             .build()
 
         val newRequest: Request = originalRequest.newBuilder()
@@ -29,7 +28,7 @@ class MovieInterceptor : Interceptor {
 
 }
 
-
+//https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY.key}&language=en-US&page=1
 /*
 val newUrl: HttpUrl = originalRequest.url.newBuilder()
     .addQueryParameter("api_key", API_KEY.key)
